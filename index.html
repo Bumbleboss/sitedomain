@@ -1,1 +1,20 @@
-hello from github
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script src="https://smtpjs.com/v3/smtp.js"></script>
+</head>
+<body>
+  <div onclick="sendEmail()" style="cursor:pointer">click to send an email.</div>
+  <script>
+    function sendEmail() {
+       Email.send({
+          SecureToken : "b526b3f7-82de-40e8-8c3f-2e8a216bc15a",
+          To : 'me@bumbleboss.xyz',
+          From : "no-reply@bumbleboss.xyz",
+          Subject : "This is a test",
+          Body : "And this is the body"
+      }).then(message => alert(message));
+    }
+  </script>
+</body>
+</html>
